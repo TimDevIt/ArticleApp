@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-db.sequelize.sync()
+db.sequelize.sync({ alter: true})
   .then(() => {
     console.log("Synced db.");
   })

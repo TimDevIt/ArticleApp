@@ -13,11 +13,25 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   }
 });
 
+
+const Article = require('./article.model.js')(sequelize, Sequelize);
+const Comment = require('./comment.model.js')(sequelize, Sequelize);
+
+Comment.belongsTo(Article, { 
+  foreignKey: 'article_id'   
+});
+ 
+Article.hasMany(Comment, { 
+  foreignKey: 'article_id' 
+});
+
 const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+db.Article = Article;      
+db.Comment = Comment;      
 
-
+ 
 module.exports = db;
