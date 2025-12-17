@@ -1,7 +1,16 @@
 <template>
   <v-app>
     <v-main>
-      <router-view/>
+      <v-app-bar app color="primary" dark>
+      <v-app-bar-title>ArticleApp</v-app-bar-title>
+      
+      <!-- Desktop навигация -->
+      <v-spacer></v-spacer>
+      <v-btn text to="/" exact>Главная</v-btn>
+      <v-btn text to="">Список статей</v-btn>
+      <v-btn text to="/article" color="white">Новая статья</v-btn>
+    </v-app-bar>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
@@ -12,7 +21,13 @@ export default {
   name: 'App',
 
   data: () => ({
-    //
+    
   }),
 }
 </script>
+
+
+<style>
+
+
+</style>
