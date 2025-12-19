@@ -7,8 +7,8 @@
       <!-- Desktop навигация -->
       <v-spacer></v-spacer>
       <v-btn text to="/" exact>Главная</v-btn>
-      <v-btn text to="">Список статей</v-btn>
-      <v-btn text to="/article" color="white">Новая статья</v-btn>
+      <v-btn text to="/articles">Список статей</v-btn>
+      <v-btn text to="/article">Новая статья</v-btn>
     </v-app-bar>
       <router-view></router-view>
     </v-main>
