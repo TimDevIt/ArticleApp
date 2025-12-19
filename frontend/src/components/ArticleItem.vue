@@ -1,6 +1,8 @@
 <template>
     <v-list-item 
       :key="article.id"
+      border="primary lg"
+      style="margin-top: 10px;"
     >
       <div class="pa-2">
         <div class="text-h6 mb-1">{{ article.title }}</div>
