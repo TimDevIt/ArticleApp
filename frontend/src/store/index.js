@@ -1,14 +1,11 @@
 import { createStore } from 'vuex'
+import { articleModule } from '@/store/articleModule';
+import { commentModule } from '@/store/commentModule';
+
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    article: articleModule,
+    comment: commentModule
   }
 })

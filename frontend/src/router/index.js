@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import CreateArticleView from '@/views/CreateArticleView.vue';
+import ArticleListView from '@/views/ArticleListView.vue';
+import ArticleDetailView from '@/views/ArticleDetailView.vue';
+import UpdateArticleView from '@/views/UpdateArticleView.vue';
 
 
 const routes = [
@@ -9,10 +12,25 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+   {
+    path: '/articles',
+    name: 'articles',
+    component: ArticleListView
+  },
   {
     path: '/article',
-    name: 'article',
+    name: 'createArticle',
     component: CreateArticleView
+  },
+  {
+    path: '/article/:id',
+    name: 'readArticle',
+    component: ArticleDetailView
+  },
+  {
+    path: '/article/:id/update',
+    name: 'updateArticle',
+    component: UpdateArticleView
   }
 ]
 
