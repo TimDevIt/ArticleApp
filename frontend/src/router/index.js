@@ -4,6 +4,7 @@ import CreateArticleView from '@/views/CreateArticleView.vue';
 import ArticleListView from '@/views/ArticleListView.vue';
 import ArticleDetailView from '@/views/ArticleDetailView.vue';
 import UpdateArticleView from '@/views/UpdateArticleView.vue';
+import CommentAnaylticView from '@/views/CommentAnaylticView.vue';
 
 
 const routes = [
@@ -31,6 +32,11 @@ const routes = [
     path: '/article/:id/update',
     name: 'updateArticle',
     component: UpdateArticleView
+  },
+  {
+    path: '/analytic/comments',
+    name: 'analyticComments',
+    component: CommentAnaylticView
   }
 ]
 
